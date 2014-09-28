@@ -82,7 +82,18 @@ var json_handler = createResponseHandler(function (data) {
 // Read user data from a JSON object and output content
 var user_data_handler = createResponseHandler(function (data) {
   var obj = JSON.parse(data)
-  console.log(obj.user_data.toString());
+  user_data = obj.user_data.split("\r\n");
+  user_data = user_data.map(
+      function (line) {
+          return line.split(',').map(
+              function (token) {
+                  token = ' ' + token;
+                  token = token + Array(15 - token.length).join(' ');
+                  token = token + '|'; 
+                  return token; 
+          }).join(""); 	
+      });
+  console.log(user_data.join("\n"));
 }); 
 
 console.log(' --> connecting to ' + options.host + ' on port ' + options.port);
