@@ -1,5 +1,6 @@
 var url = require('url');
 var http = require('http');
+var fs = require('fs');
 
 if (process.argv.length < 3) {
   console.log('usage: node http-client.js [h|rh|json|user_data] [url]');
@@ -82,6 +83,13 @@ var json_handler = createResponseHandler(function (data) {
 // Read user data from a JSON object and output content
 var user_data_handler = createResponseHandler(function (data) {
   var obj = JSON.parse(data)
+  fs.writeFile('user_client.csv', obj.user_data, function (err) {
+      if (err) {
+         console.log(err);
+      } else {
+         console.log("The file 'user_client.csv' was saved!");
+      }
+  });
   user_data = obj.user_data.split("\r\n");
   user_data = user_data.map(
       function (line) {

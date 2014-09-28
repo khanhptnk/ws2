@@ -45,13 +45,13 @@ function userDataHandler(request, response) {
 }
 
 if (process.argv.length < 3) {
-  console.log('usage: node http-server.js [text|json]');
+  console.log('usage: node http-server.js [text|json|user_data]');
   process.exit(1);
 }
 
 var handlerType = process.argv[2];
 if (!(handlerType === 'text' || handlerType === 'json' || handlerType === 'user_data')) {
-  console.log('usage: node http-server.js [text|json]');
+  console.log('usage: node http-server.js [text|json|user_data]');
   process.exit(1);  
 }
 

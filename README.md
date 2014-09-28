@@ -12,8 +12,7 @@ CS 326
 
 - Add an argument option 'user_data' to allow requesting user data. Modify the if-statement and switch-statement to check for this case.
 - Create object 'user_data_handler', created by 'createResponseHandler',
-which takes the function that reads the JSON object, parse it and display
-user data in a textual way. 
+which takes the function that reads the JSON object, parse the object, save user data to the local folder as 'user_client.csv' and display user data in a textual way. 
 
 ## 3. Extend 'http-server.js':
 
