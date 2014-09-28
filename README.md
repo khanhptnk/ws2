@@ -1,4 +1,4 @@
-Khanh Nguyen 
+Khanh Nguyen    
 CS 326 
 # Workshop 2
 
