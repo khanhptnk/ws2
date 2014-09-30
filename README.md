@@ -17,4 +17,4 @@ which takes the function that reads the JSON object, parse the object, save user
 ## 3. Extend 'http-server.js':
 
 - Add an argument option 'user_data' to offer user data service. Modify the if-statement and switch-statement to check for this case. 
-- Implement function 'userDataHandler' that responds to the request of user data from the client. It reads the content of 'user.csv' from local folder and serializes it into a the 'user_data' field of a JSON object. 
+- Implement function 'userDataHandler' that responds to the request of user data from the client. It reads the content of 'user.csv' from local folder and serializes it into a the 'user_data' field of a JSON object and sends the object back to the user. 
