@@ -1,6 +1,6 @@
 Khanh Nguyen    
 CS 326
-
+F
 # Workshop 2
 
 ## 1. Create 'user.csv':
